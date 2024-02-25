@@ -28,6 +28,14 @@
   .qna.active .question::after {
     content: "-";
   }
+  .selectlist.show {
+  	opacity: 1;
+    visibility: visible;
+  }
+  .selectlist-item.active {
+	  background: #ffe500;
+    font-weight: 700;
+  }
 </style>
 <body>
     <nav id="navber" class="gordita500 px-3 lg:px-5 xl:px-[35px] py-[20px] top-0 left-0 right-0 w-full z-10  duration-[.4s] ease-out absolute navigation">
@@ -207,31 +215,43 @@
               <div class="w-full lg:w-1/4">
                 <div class="py-[5px] px-[15px] border-y lg:border-y-0 lg:border-r border-[#eeecec]">
                   <div class="gordita400 text-sm text-[#9098ad]">I’m looking to..</div>
-                  <div class="nice-select relative">
-                    <span class="flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black cursor-pointer">Buy Portfolio
-                      <img src="../imgs/icon_137.svg">
-                    </span>
+                  <div class="select relative after:absolute after:w-[10px] after:h-[7px] after:bg-[url(../imgs/icon_137.svg)] after:right-0 after:top-[10px]">
+                      <button type="button" class="selectbutton flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black w-full">Buy Portfolio</button>
+                      <ul class="selectlist absolute bg-white w-full border rounded-md opacity-0 invisible duration-200 z-[1]">
+                        <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer rounded-t-md active hover:bg-[#ffe500] duration-200" data-value="Buy Portfolio">Buy Portfolio</li>
+                        <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer hover:bg-[#ffe500] duration-200" data-value="Condo">Condo</li>
+                        <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer hover:bg-[#ffe500] duration-200" data-value="Apartments">Apartments</li>
+                        <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer hover:bg-[#ffe500] duration-200" data-value="Villa">Villa</li>
+                        <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer rounded-b-md hover:bg-[#ffe500] duration-200" data-value="For Rent">For Rent</li>
+                      </ul>
                   </div>
                 </div> 
               </div>
               <div class="w-full lg:w-1/4">
                 <div class="py-[5px] px-[15px] border-y lg:border-y-0 lg:border-r border-[#eeecec]">
                   <div class="gordita400 text-sm text-[#9098ad]">Markets</div>
-                  <div class="nice-select relative">
-                    <span class="flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black cursor-pointer">New York
-                      <img src="../imgs/icon_137.svg">
-                    </span>
-                  </div>
+                  <div class="select relative after:absolute after:w-[10px] after:h-[7px] after:bg-[url(../imgs/icon_137.svg)] after:right-0 after:top-[10px]">
+                    <button type="button" class="selectbutton flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black w-full">South Carolina</button>
+                    <ul class="selectlist absolute bg-white w-full border rounded-md opacity-0 invisible duration-200 z-[1]">
+                      <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer rounded-t-md active hover:bg-[#ffe500] duration-200" data-value="New York">New York</li>
+                      <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer hover:bg-[#ffe500] duration-200" data-value="New Jersey">New Jersey</li>
+                      <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer hover:bg-[#ffe500] duration-200" data-value="Pennsylvania">Pennsylvania</li>
+                      <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer hover:bg-[#ffe500] duration-200" data-value="South Carolina">South Carolina</li>
+                    </ul>
+                </div>
                 </div>
               </div>
               <div class="w-full lg:w-1/4">
                 <div class="py-[5px] px-[15px] border-y lg:border-y-0 lg:border-r border-[#eeecec]">
                   <div class="gordita400 text-sm text-[#9098ad]">Price Range</div>
-                  <div class="nice-select relative">
-                    <span class="flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black cursor-pointer">$40,000 - $500,000
-                      <img src="../imgs/icon_137.svg">
-                    </span>
-                  </div>
+                  <div class="select relative after:absolute after:w-[10px] after:h-[7px] after:bg-[url(../imgs/icon_137.svg)] after:right-0 after:top-[10px]">
+                    <button type="button" class="selectbutton flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black w-full">$40,000 - $500,000</button>
+                    <ul class="selectlist absolute bg-white w-full border rounded-md opacity-0 invisible duration-200 z-[1]">
+                      <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer rounded-t-md active hover:bg-[#ffe500] duration-200" data-value="$10,000 - $200,000">$10,000 - $200,000</li>
+                      <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer hover:bg-[#ffe500] duration-200" data-value="$20,000 - $300,000">$20,000 - $300,000</li>
+                      <li class="selectlist-item h-10 pl-[18px] pr-[29px] leading-10 cursor-pointer hover:bg-[#ffe500] duration-200" data-value="$40,000 - $500,000">$40,000 - $500,000</li>
+                    </ul>
+                </div>
                 </div>
               </div>
               <div class="w-full lg:w-1/4">
@@ -830,7 +850,6 @@
     <!-- Footer End -->
     <div id="uparrow" class="fixed right-[5px] bottom-5 h-[35px] w-[35px] bg-[#ff3294] rounded-full text-center leading-[35px] z-[2] text-white cursor-pointer hidden"><i class="fa-solid fa-arrow-up-long"></i></div>
     
-        <!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
         <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="../javascript/script.js"></script>

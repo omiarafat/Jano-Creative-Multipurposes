@@ -189,11 +189,26 @@ question.forEach((qsitem) => {
 });
 // accordion faq End
 
+// custom select start
 
-
-
-
-
-
-
-
+document.querySelectorAll('.select').forEach(function (dropdownWrapper) {
+  const dropdownBtn = dropdownWrapper.querySelector('.selectbutton');
+  const dropdownList = dropdownWrapper.querySelector('.selectlist');
+  const dropdownItems = dropdownList.querySelectorAll('.selectlist-item');
+  
+  dropdownBtn.addEventListener('click', function () {
+    dropdownList.classList.toggle('show');
+  });
+  
+  dropdownItems.forEach(function(listItem) {
+    listItem.addEventListener('click', function (e) {
+      dropdownItems.forEach(function(el) {
+        el.classList.remove('active');
+      })
+      e.target.classList.add('active');
+      dropdownBtn.innerText = this.innerText;
+      dropdownList.classList.remove('show');
+    })
+  })
+})
+// custom select End
