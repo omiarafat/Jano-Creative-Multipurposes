@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: gordita300;
+    src: url(../fonts/Gordita-Light.ttf);
+    }
+    .gordita300{
+        font-family: gordita300;
+    
+    }
+
+@font-face {
+    font-family: gordita300it;
+    src: url(../fonts/Gordita-LightItalic.ttf);
+    }
+    .gordita300it{
+        font-family: gordita300it;
+    
+    }
+
+@font-face {
+    font-family: gordita400;
+    src: url(../fonts/Gordita-Regular.ttf);
+    }
+    .gordita400{
+        font-family: gordita400;
+    
+    }
+
+@font-face {
+    font-family: gordita400it;
+    src: url(../fonts/Gordita-Italic.ttf);
+    }
+    .gordita400it{
+        font-family: gordita400it;
+    
+    }
+
+@font-face {
+    font-family: gordita500;
+    src: url(../fonts/Gordita-Medium.ttf);
+    }
+    .gordita500{
+        font-family: gordita500;
+    
+    }
+
+@font-face {
+    font-family: gordita700;
+    src: url(../fonts/Gordita-Bold.ttf);
+    }
+    .gordita700{
+        font-family: gordita700;
+    
+    }
+@font-face {
+    font-family: gordita700it;
+    src: url(../fonts/Gordita-BoldItalic.ttf);
+    }
+    .gordita700it{
+        font-family: gordita700it;
+    
+    }
+
+@font-face {
+    font-family: gordita900;
+    src: url(../fonts/Gordita-Black.ttf);
+    }
+    .gordita900{
+        font-family: gordita900;
+    
+    }
+
+@font-face {
+    font-family: gordita900it;
+    src: url(../fonts/Gordita-BlackItalic.ttf);
+    }
+    .gordita900it{
+        font-family: gordita900it;
+    
+    }
+
+
+.text-stroke-1{
+    -webkit-text-stroke: 1px #fff95f;
+}
+.text-stroke-2{
+    -webkit-text-stroke: 1px #ffff;
+}
+
+
+

@@ -1,0 +1,838 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="./output.css" rel="stylesheet">
+    <title>Jano-Creative Multipurpose</title>
+</head>
+<style type="text/css">
+  .offcanvas {
+    transform: translateX(0);
+  }
+  .menu-item.active .menu-child {
+    display: block;
+  }
+
+  .qna.active {
+    background: #f5f7fc;
+  }
+  .qna.active .question {
+    border-color: transparent;
+  }
+  .qna .question::after {
+    content: "+";
+  }
+  .qna.active .question::after {
+    content: "-";
+  }
+</style>
+<body>
+    <nav id="navber" class="gordita500 px-3 lg:px-5 xl:px-[35px] py-[20px] top-0 left-0 right-0 w-full z-10  duration-[.4s] ease-out absolute navigation">
+      <div class="flex items-center lg:justify-between">
+        <!-- Logo etc -->
+        <div class="flex items-center h-[50px]">
+          <a class="block" href="#">
+            <img src="../imgs/logo_07.png">
+          </a>
+        </div>
+
+        <!-- Menu -->
+        
+        <div class="hidden lg:block">
+          <ul class="py-2 flex">
+            <li class="block">
+              <a class="text-[#FF8C24] no-underline py-[13px] lg:mx-5 xl:mx-[26px] text-lg lg:inline-block xl:inline nav-link active" href="#home">
+                Home<i class="fa-solid fa-angle-down text-[12px] ml-1"></i>
+              </a>
+            </li>
+            <li class="block relative group">
+              <a class="text-black no-underline hover:text-[#FF8C24] py-[13px] lg:mx-5 xl:mx-[26px] text-lg lg:inline-block xl:inline ease-in-out duration-[.3s] transition-all  nav-link" href="#pages">
+                Pages<i class="fa-solid fa-angle-down text-[12px] ml-1"></i>
+              </a>
+              <ul class="absolute left-0 right-0 top-[42px] bg-white px-[5px] py-[10px] w-[250px] block translate-y-[5px] shadow-[0_50px_100px_rgba(0,0,0,0.12)] rounded-[5px] opacity-0 invisible transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-hover:visible">
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 01</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 01</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 01</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 01</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 01</a></li>
+              </ul>
+            </li>
+            <li class="block relative group">
+              <a class="text-black no-underline hover:text-[#FF8C24] py-[13px] lg:mx-5 xl:mx-[26px] text-lg lg:inline-block xl:inline ease-in-out duration-[.3s] transition-all nav-link" href="#portfolio">
+                Portfolio<i class="fa-solid fa-angle-down text-[12px] ml-1"></i>
+              </a>
+              <ul class="absolute left-0 right-0 top-[42px] bg-white px-[5px] py-[10px] w-[250px] block translate-y-[5px] shadow-[0_50px_100px_rgba(0,0,0,0.12)] rounded-[5px] opacity-0 invisible transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-hover:visible">
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 01</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 02</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 03</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 04</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Portfolio 05</a></li>
+              </ul>
+            </li>
+            <li class="block relative group">
+              <a class="text-black no-underline hover:text-[#FF8C24] py-[13px] lg:mx-5 xl:mx-[26px] text-lg lg:inline-block xl:inline ease-in-out duration-[.3s] transition-all  nav-link" href="#blog">
+                Blog<i class="fa-solid fa-angle-down text-[12px] ml-1"></i>
+              </a>
+              <ul class="absolute left-0 right-0 top-[42px] bg-white px-[5px] py-[10px] w-[250px] block translate-y-[5px] shadow-[0_50px_100px_rgba(0,0,0,0.12)] rounded-[5px] opacity-0 invisible transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-hover:visible">
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">List With sidebar</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Grid With sidebar</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Grid Layout</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="block relative group">
+              <a class="text-black no-underline hover:text-[#FF8C24] py-[13px] lg:mx-5 xl:mx-[26px] text-lg lg:inline-block xl:inline ease-in-out duration-[.3s] transition-all  nav-link" href="#contact">
+                Contact<i class="fa-solid fa-angle-down text-[12px] ml-1"></i>
+              </a>
+              <ul class="absolute left-0 right-0 top-[42px] bg-white px-[5px] py-[10px] w-[250px] block translate-y-[5px] shadow-[0_50px_100px_rgba(0,0,0,0.12)] rounded-[5px] opacity-0 invisible transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-hover:visible">
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Contact- insurance</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Contact- Agency</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Contact- Web Hosting</a></li>
+                <li><a class="leading-[44px] px-[15px] block capitalize transition-all duration-300 ease-in-out hover:text-[#FF8C24]" href="#">Contact- L.Generation</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center ml-auto">
+          <form class="relative w-[300px] h-[45px] ml-[51px] mr-6 hidden xl:block">
+              <input type="text" placeholder="Search Here..." class="pl-[35px] pr-[15px] h-full w-full bg-transparent border-b-2 border-black gordita400 text-[15px] italic focus:outline-none">
+              <img src="../imgs/icon_122.svg" class="absolute left-0 top-1/2 translate-y-[-50%]">
+          </form>
+
+          <a href="#" class="w-[45px] xl:w-[50px] h-[45px] xl:h-[50px] bg-black text-white inline-block text-center leading-[45px] xl:leading-[50px] rounded-full text-[22px] ease-in-out duration-[.3s] hover:bg-[#ffe500] hover:text-black mr-4"><i class="fa-regular fa-user"></i></a>
+
+          <a href="#" class="text-white text-base font-medium leading-[50px] px-7 bg-black rounded-[28px]  ease-in-out duration-[.3s] hover:bg-[#ffe500] hover:text-black hidden lg:block">Sign Up</a>
+        </div>
+        <!-- Toggle button (hidden on large screens) -->
+        <button class="menuBtn w-11 h-[38px] bg-[#ffe500] rounded-[5px] cursor-pointer block lg:hidden">
+          <span class="open-menu justify-center items-center flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16">
+                  <g fill="#252a32" fill-rule="evenodd">
+                      <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                  </g>
+              </svg>
+          </span>
+        </button>
+        <!-- Menu End -->
+
+        <!-- Toggle Menu -->
+          <div class="menu-wrapper fixed bg-white w-[320px] h-screen left-0 top-0 px-[15px] pt-8 pb-5 duration-300 ease-in-out translate-x-[-115%] shadow-[15px_0_25px_rgba(35,35,35,0.09)]">
+              <ul class="menu">
+                  <li class="menu-block">
+                      <span class="mb-[86.5px] flex justify-between items-center">
+                        <a href="index.html"><img src="../imgs/logo_07.png"></a>
+                        <button class="close-menu">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path fill="#252a32" fill-rule="evenodd" d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" />
+                          </svg>
+                        </button>
+                      </span>
+                  </li>
+                  <li class="menu-item has-collapsible">
+                      <a class="py-[13px] flex justify-between font-medium duration-300 ease-in-out hover:text-[#ff8c24]"  href="#">Home <span><i class="fa-solid fa-angle-down"></i></span></a>
+                      <ul class="menu-child bg-[#eefbfa] hidden">
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-item has-collapsible">
+                      <a class="py-[13px] flex justify-between font-medium duration-300 ease-in-out hover:text-[#ff8c24]"  href="#">Pages <span><i class="fa-solid fa-angle-down"></i></span></a>
+                      <ul class="menu-child bg-[#eefbfa] hidden">
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-item has-collapsible">
+                      <a class="py-[13px] flex justify-between font-medium duration-300 ease-in-out hover:text-[#ff8c24]"  href="#">Portfolio <span><i class="fa-solid fa-angle-down"></i></span></a>
+                      <ul class="menu-child bg-[#eefbfa] hidden">
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-item has-collapsible">
+                      <a class="py-[13px] flex justify-between font-medium duration-300 ease-in-out hover:text-[#ff8c24]"  href="#">Blog <span><i class="fa-solid fa-angle-down"></i></span></a>
+                      <ul class="menu-child bg-[#eefbfa] hidden">
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-item has-collapsible">
+                      <a class="py-[13px] flex justify-between font-medium duration-300 ease-in-out hover:text-[#ff8c24]"  href="#">Contact <span><i class="fa-solid fa-angle-down"></i></span></a>
+                      <ul class="menu-child bg-[#eefbfa] hidden">
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                          <li class="menu-child-item"><a class="px-[10px] text-[15px] leading-[42px] block duration-300 ease-in-out hover:text-[#ff8c24]" href="#">Sub Menu Item</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <div class="text-center mt-[70px]">
+                  <form class="relative w-[96%] h-[45px] mx-auto">
+                      <input type="text" placeholder="Search Here..." class="pl-[35px] pr-[15px] h-full w-full bg-transparent border-b-2 border-black text-[15px] italic focus:outline-none">
+                      <img src="../imgs/icon_122.svg" class="absolute left-0 top-1/2 translate-y-[-50%]">
+                  </form>
+                  <a href="#" class="text-white text-base font-medium leading-[50px] px-7 mt-[30px] bg-black rounded-[28px] inline-block ease-in-out duration-[.3s] hover:bg-[#ffe500] hover:text-black">Sign Up</a>
+              </div>
+          </div>
+        <!-- Toggle Menu End-->
+      </div>
+    </nav>
+    
+    <!-- Banar Start -->
+    <div class="pt-[150px] xl:pt-[190px] pb-[80px] xl:pb-[225px] bg-[url(../imgs/img_72.jpg)] bg-left-bottom bg-no-repeat bg-cover relative">
+        <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+            <div class="text-center relative">
+                <h1 class="text-[45px] lg:text-[55px] xl:text-[75px] leading-[54.9px] lg:leading-[67px] xl:leading-[91.3px] tracking-[-0.6px] lg:tracking-[0px] mb-2 xl:mb-0 gordita500">Discover your <br>  home, you'll love to <span class="relative z-0">live. <img src="../imgs/shape_161.svg" class="absolute left-0 top-[14px] z-[-1]"></span></h1>
+                <p class="pt-5 xl:pt-[35px] mb-[50px] xl:mb-20 text-[19px] sm:text-[20.5px] xl:text-[22px] leading-[31.733px] xl:leading-[36.733px] gordita400">Let’s find a home that’s perfect for your future</p>
+                <img src="../imgs/shape_159.svg" class="absolute lg:top-[27%] xl:top-[55%] lg:left-[1%] xl:-left-[30px] hidden lg:block">
+            </div>
+                   <!-- search-area -->
+            <div class="lg:py-[25px] lg:flex items-start bg-white relative">
+              <div class="w-full lg:w-1/4">
+                <div class="py-[5px] px-[15px] border-y lg:border-y-0 lg:border-r border-[#eeecec]">
+                  <div class="gordita400 text-sm text-[#9098ad]">I’m looking to..</div>
+                  <div class="nice-select relative">
+                    <span class="flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black cursor-pointer">Buy Portfolio
+                      <img src="../imgs/icon_137.svg">
+                    </span>
+                  </div>
+                </div> 
+              </div>
+              <div class="w-full lg:w-1/4">
+                <div class="py-[5px] px-[15px] border-y lg:border-y-0 lg:border-r border-[#eeecec]">
+                  <div class="gordita400 text-sm text-[#9098ad]">Markets</div>
+                  <div class="nice-select relative">
+                    <span class="flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black cursor-pointer">New York
+                      <img src="../imgs/icon_137.svg">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/4">
+                <div class="py-[5px] px-[15px] border-y lg:border-y-0 lg:border-r border-[#eeecec]">
+                  <div class="gordita400 text-sm text-[#9098ad]">Price Range</div>
+                  <div class="nice-select relative">
+                    <span class="flex justify-between items-center gordita500 xl:gordita400 text-[15px] xl:text-xl leading-10 text-black cursor-pointer">$40,000 - $500,000
+                      <img src="../imgs/icon_137.svg">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/4">
+                <div class="py-[5px] px-[15px]">
+                  <button class="w-full h-[55px] xl:h-[70px] bg-[#252525] text-white text-[15px] xl:text-xl leading-[22.5px] xl:leading-[30px] gordita500 duration-300 ease-in-out hover:bg-[#FFE500] hover:text-[#000]">Search Now</button>
+                </div>
+              </div>
+              <img src="../imgs/shape_160.svg" class="absolute bottom-[-65px] left-[-85px]">
+            </div>
+              <!-- search-area End -->
+        </div>
+        <img src="../imgs/sticker_01.png" class="absolute w-[100px] xl:w-[168px] bottom-[-45px] xl:bottom-[-85px] right-[9.3%] lg:right-[6.5%] xl:right-[10%]">
+    </div>
+    <!-- Banar End -->
+    
+    <!-- Service Start -->
+    <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 xl:px-0 mx-auto">
+      <div class="brd pt-[120px] xl:pt-[200px] pb-[130px] lg:pb-[180px] relative border-x border-[#00000012] before:absolute before:h-full before:w-1/4 before:border-x before:border-[#00000012] before:top-0 before:left-1/4 before:z-[-1] after:absolute after:h-full after:w-1/4 after:border-x after:border-[#00000012] after:top-0 after:right-1/4 after:z-[-1]">
+        <div class="lg:flex items-center -mx-3">
+          <div class="w-full lg:w-2/4 px-3">
+            <h2 class="text-[34px] lg:text-5xl xl:text-[55px] gordita500 leading-[42.5px] lg:leading-[60px] xl:leading-[68px] mb-5 lg:mb-2">Service we provide with care.</h2>
+          </div>
+          <div class="w-full lg:w-[41.666%] px-3 ml-auto">
+            <p class="text-[#48494E] leading-[31.733px] xl:leading-9 gordita400 text-xl lg:text-[19px] xl:text-[22px]">Inciddnt ut labore et dolor magna aliu. enim ad mim venam, quis nostru labore elit lorem dus amet lorem.</p>
+          </div>
+        </div>
+    
+        <div class="relative gordita500">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-5 lg:pt-10 xl:pt-[90px] -mx-3">
+            <div class="px-3">
+              <div class="mt-[35px] group relative text-center">
+                <img src="../imgs/img_73.jpg">
+                <div class="absolute w-full h-full left-0 top-0 py-10 duration-300 ease-in-out group-hover:bg-[#0000004d]">
+                  <h3 class="text-[22px] lg:text-[28px] leading-[26.4px] lg:leading-[33.6px] mb-2 gordita500">Condos</h3>
+                  <a class="mt-[264px] sm:mt-[150px] md:mt-[254px] lg:mt-[184px] xl:mt-72 text-[15px] lg:text-base leading-[48px] lg:leading-[52px] text-white px-[35px] lg:px-10 bg-[#ff733b] rounded-md duration-300 ease-in-out inline-block hover:bg-[#090F32] translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100" href="#">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="px-3">
+              <div class="mt-[35px] group relative text-center">
+                <img src="../imgs/img_74.jpg">
+                <div class="absolute w-full h-full left-0 top-0 py-10 duration-300 ease-in-out group-hover:bg-[#0000004d]">
+                  <h3 class="text-[22px] lg:text-[28px] leading-[26.4px] lg:leading-[33.6px] mb-2 gordita500">Property</h3>
+                  <a class="mt-[264px] sm:mt-[150px] md:mt-[254px] lg:mt-[184px] xl:mt-72 text-[15px] lg:text-base leading-[48px] lg:leading-[52px] text-white px-[35px] lg:px-10 bg-[#ff733b] rounded-md duration-300 ease-in-out inline-block hover:bg-[#090F32] translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100" href="#">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="px-3">
+              <div class="mt-[35px] group relative text-center">
+                <img src="../imgs/img_75.jpg">
+                <div class="absolute w-full h-full left-0 top-0 py-10 duration-300 ease-in-out group-hover:bg-[#0000004d]">
+                  <h3 class="text-[22px] lg:text-[28px] leading-[26.4px] lg:leading-[33.6px] mb-2 gordita500">Home Rent</h3>
+                  <a class="mt-[264px] sm:mt-[150px] md:mt-[254px] lg:mt-[184px] xl:mt-72 text-[15px] lg:text-base leading-[48px] lg:leading-[52px] text-white px-[35px] lg:px-10 bg-[#ff733b] rounded-md duration-300 ease-in-out inline-block hover:bg-[#090F32] translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100" href="#">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute w-9 h-9 bg-black -left-[50px] top-[69px]"></div>
+        </div>
+        <div class="relative mt-20 xl:mt-[120px] -mx-3 gordita500">
+          <div class="md:w-5/6 px-3 mx-auto text-center">
+            <div class="flex justify-center items-center w-[55px] lg:w-[70px] xl:w-[105px] h-[55px] lg:h-[70px] xl:h-[105px] bg-black rounded-full mx-auto">
+              <img class="w-[25px] lg:w-10 xl:w-[49px]" src="../imgs/icon_138.svg">
+            </div>
+            <p class="text-[35px] sm:text-[32px] lg:text-5xl xl:text-[57px] leading-[51px] lg:leading-[68px] xl:leading-[78px] mt-[25px] mb-[30px]">“Apartment floor will become Bluelofts live-work centers in Dallas tower”</p>
+            <h6 class="text-lg lg:text-xl leading-[21px] lg:leading-6 opacity-50 italic mb-2 gordita400">Marvin S.</h6>
+          </div>
+          <img class="absolute left-[-14%] md:left-[-12%] lg:left-[-13%] bottom-[97%] md:bottom-[110%] lg:bottom-[66%]" src="../imgs/shape_162.svg">
+        </div>
+        <img class="absolute left-[15px] xl:left-[-85px] bottom-[1%] xl:bottom-[7%] w-[100px] xl:w-[168px]" src="../imgs/sticker_02.png">
+        <div class="absolute w-[90px] xl:w-[105px] h-[90px] xl:h-[105px] bg-[#1a1a1a] right-[5px] lg:right-0 bottom-[1%] xl:bottom-[117px]"></div>
+        <div class="absolute w-10 h-10 bg-[#fff500] -right-9 lg:right-[-41px] bottom-[76px]"></div>
+      </div>
+    </div>
+    <!-- Service End -->
+    
+    <!-- Best Property Start -->
+    <div class="py-[100px] xl:pt-[130px] xl:pb-40 bg-[#f5f7fc] relative">
+      <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+        <div class="md:flex items-center -mx-3 gordita500">
+          <div class="md:w-5/12 lg:w-2/4 px-3 text-center md:text-start">
+            <h2 class="text-[34px] lg:text-5xl xl:text-[55px] leading-[42.5px] lg:leading-[60px] xl:leading-[68px] mb-[30px] md:mb-2">Best Property.</h2>
+          </div>
+          <div class="md:w-7/12 lg:w-2/4 px-3 text-center md:text-end">
+              <!-- Tabs -->
+            <ul id="tabs" class="w-full">
+              <li class="inline-block ml-[25px] lg:ml-10 px-3 mb-[-1px] text-[13px] lg:text-[14px] tracking-[3px] leading-[25px] bg-black text-white"><a id="default-tab" href="#first">PROPERTY</a></li>
+              <li class="inline-block ml-[25px] lg:ml-10 px-3 mb-[-1px] text-[13px] lg:text-[14px] tracking-[3px] leading-[25px]"><a href="#second">CONDOS</a></li>
+              <li class="inline-block ml-[25px] lg:ml-10 px-3 mb-[-1px] text-[13px] lg:text-[14px] tracking-[3px] leading-[25px]"><a href="#third">LAND</a></li>
+            </ul>
+          </div>
+        </div>
+          <!-- Tab Contents -->
+          <div id="tab-contents" class="mt-5 xl:mt-[50px]">
+            <div id="first" class="transition duration-[.25s] ease-linear">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_76.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">Blueberry villa.</a></h4>
+                         <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$34,900</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_77.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">White House villa</a></h4>
+                        <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$28,100</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_78.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">Luxury villa in Dal lake.</a></h4>
+                        <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$42,500</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="second" class="transition duration-[.25s] ease-linear hidden">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_78.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">Blueberry villa.</a></h4>
+                        <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$34,900</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_76.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">White House villa</a></h4>
+                        <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$28,100</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_77.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">Luxury villa in Dal lake.</a></h4>
+                        <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$42,500</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="third" class="transition duration-[.25s] ease-linear hidden">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_77.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">Blueberry villa.</a></h4>
+                        <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$34,900</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_76.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">White House villa</a></h4>
+                        <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$28,100</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3">
+                  <div class="bg-white mt-9 gordita500">
+                    <img class="" src="../imgs/img_78.jpg">
+                    <div class="px-[15px] xl:px-[35px] pt-[30px] xl:pt-8 pb-5 xl:pb-[25px]">
+                      <h4 class="mb-2"><a class="inline-block text-xl xl:text-[22px] leading-[30px] xl:leading-[34px] tracking-[-.48px]" href="#">Luxury villa in Dal lake.</a></h4>
+                        <p class="gordita400 sm:text-base xl:text-lg leading-[30px] xl:leading-[34px] text-[#00000066] mb-4">Mirpur 10, Stadium dhaka 1208</p>
+                        <div class="flex justify-between items-center">
+                          <strong class="text-[22px] xl:text-4xl leading-[33px] xl:leading-[54px]">$42,500</strong>
+                          <a class="inline-block h-10 w-10 text-center leading-10 bg-black text-white text-[22px] hover:bg-[#ffe500] hover:text-black" href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <img class="absolute right-[20%] -bottom-11" src="../imgs/shape_163.svg">
+    </div>
+    <!-- Best Property End -->
+    
+    <!-- ABOUT US Start -->
+    <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+      <div class="brd pt-[120px] pb-[110px] xl:py-[200px] relative border-x border-[#00000012] before:absolute before:h-full before:w-1/4 before:border-x before:border-[#00000012] before:top-0 before:left-1/4 before:z-[-1] after:absolute after:h-full after:w-1/4 after:border-x after:border-[#00000012] after:top-0 after:right-1/4 after:z-[-1]">
+        <div class="-mx-3 lg:flex gordita500">
+          <div class="lg:w-1/2 px-3 lg:order-1 lg:ml-auto">
+            <div class="pl-0 xl:pl-6">
+              <div class="">
+                <div class="gordita400 text-[14px] xl:text-[15px] leading-[21px] xl:leading-[22.5px] tracking-[2px] mb-[15px] text-[#0000004d]">ABOUT US</div>
+                <h2 class="text-4xl md:text-[42px] lg:text-[52px] xl:text-[57px] leading-[42.5px] lg:leading-[60px] xl:leading-[68.75px] mb-2 -tracking-[2px]">Create <br> visual strategy lorem.</h2>
+              </div>
+              <div class="flex mt-10 xl:mt-[70px] mb-[10px] xl:mb-10">
+                <img class="hidden lg:block" src="../imgs/shape_164.svg">
+                <p class="gordita400 pl-0 lg:pl-12 text-[19px] xl:text-[22px] leading-[31.7px] xl:leading-9 text-[#48494E]">Inciddnt ut labore et dolor magna aliu. enim ad mim venam, quis nostru labore elit lorem dus amet lorem.</p>
+              </div>
+              <div class="sm:flex justify-between items-center -mr-3">
+                <div class="w-full sm:w-1/2 lg:w-2/3 px-3 mt-[30px]">
+                  <div class="text-[35px] xl:text-[56px] leading-[52.5px] xl:leading-[90px]">
+                    <span class="count">20</span>
+                    billion
+                  </div>
+                  <p class="gordita400 xl:text-lg leading-[30px] xl:leading-[34px]">Country Impected</p>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-3 mt-[30px]">
+                  <div class="text-[35px] xl:text-[56px] leading-[52.5px] xl:leading-[90px]">
+                    <span class="count">30</span>
+                    k+
+                  </div>
+                  <p class="gordita400 xl:text-lg leading-[30px] xl:leading-[34px]">Volunteer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-5/12 px-3">
+            <div class="relative mt-[60px] lg:mt-0">
+              <div class="flex items-center -mx-3">
+                <div class="w-1/2 px-3">
+                  <img class="my-5 xl:my-10" src="../imgs/img_79.jpg">
+                  <img class="my-5 xl:my-10 ml-auto" src="../imgs/img_80.jpg">
+                </div>
+                <div class="w-1/2 px-3">
+                  <img class="my-5 xl:my-10" src="../imgs/img_81.jpg">
+                </div>
+              </div>
+              <a class="absolute w-[65px] xl:w-[100px] h-[65px] xl:h-[100px] pl-2 top-[57%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black text-white text-[32px] xl:text-[40px] text-center leading-[65px] xl:leading-[100px] rounded-full ease-in-out duration-300 hover:bg-[#ffe500] hover:text-black" href="#">
+                <i class="fa-solid fa-play"></i>
+              </a>
+              <img class="absolute top-[5%] right-[10%]" src="../imgs/shape_165.svg">
+              <img class="absolute -bottom-[5%] right-[10%]" src="../imgs/shape_163.svg">
+              <div class="absolute w-[26px] h-[26px] bg-[#fff95f] bottom-[16%] -right-[35px]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ABOUT US End -->
+    
+    <!-- Fancy-Feature Start -->
+    <div class="mx-3 lg:mx-[30px] pt-[70px] pb-[60px] xl:pb-[90px] bg-[#000000e6] relative z-[2] overflow-hidden before:absolute before:w-[52%] before:h-full before:bg-[url(../imgs/img_82.jpg)] before:bg-cover before:bg-no-repeat before:bg-center before:top-0 before:right-0 before:opacity-[.06] before:-z-[1]">
+      <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+        <div class="w-full md:w-7/12 lg:w-1/2 sm:px-3 ml-auto">
+          <h2 class="gordita700 pr-[15%] sm:pr-0 md:pr-[27%] lg:pr-[9%] xl:pr-[4%] text-[45px] lg:text-[65px] xl:text-[81px] leading-[58.5px] lg:leading-[80px] xl:leading-[104px] tracking-[-2px] text-white">Expert. Afford 
+            <span class="relative text-[#191919] text-stroke-1">able.</span> 
+            Quality.</h2>
+            <div class="lg:w-5/6 xl:w-2/3 ml-auto lg:px-3">
+              <p class="gordita400 mt-5 xl:mt-[55px] mb-4 text-[19px] xl:text-[23px] leading-[31.7px] xl:leading-9 text-[#fdfdfd]">Ou spaces are designed around socialization.</p>
+            </div>
+        </div>
+      </div>
+      <div class="hidden sm:block gordita900 absolute text-[563px] lg:text-[690px] xl:text-[856px] leading-[486px] lg:leading-[600px] xl:leading-[715px] top-[-57px] lg:top-[-77px] left-[-8%] bg-[url(../imgs/img_83.jpg)] bg-cover bg-no-repeat text-transparent bg-clip-text -z-[1]">W</div>
+      <img class="absolute top-[4%] right-[1%]" src="../imgs/shape_166.svg">
+      <a class="absolute top-[39%] right-[-18px] duration-300 ease-in-out hover:translate-x-2" href="#">
+        <img src="../imgs/shape_167.svg">
+        <img class="absolute top-[46%] right-7 -translate-y-1/2" src="../imgs/icon_139.svg">
+      </a>
+      <div class="gordita700 absolute text-[50px] xl:text-[100px] leading-[75px] xl:leading-[150px] text-[#191919] text-stroke-2 right-[10%] bottom-[-25px] xl:bottom-[-50px]">Jano</div>
+    </div>
+    <!-- Fancy-Feature End -->
+    
+    <!-- Check Our Start -->
+    <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+      <div class="brd pt-[120px] xl:pt-[250px] pb-20 xl:pb-[180px] relative border-x border-[#00000012] before:absolute before:h-full before:w-1/4 before:border-x before:border-[#00000012] before:top-0 before:left-1/4 before:z-[-1] after:absolute after:h-full after:w-1/4 after:border-x after:border-[#00000012] after:top-0 after:right-1/4 after:z-[-1]">
+        <div class="md:flex -mx-3">
+          <div class="md:w-1/2 px-3">
+            <div>
+              <h2 class="gordita500 text-[35px] lg:text-[50px] xl:text-[58px] leading-[43.75px] lg:leading-[62.5px] xl:leading-[72.5px] mb-2">Check our client lovely words.</h2>
+            </div>
+            <div class="mt-10 xl:mt-[120px] xl:pl-12 xl:ml-12">
+              <!-- Swiper -->
+              <div class="swiper CheckOur">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div>
+                        <div class="h-[50px] xl:h-[60px] w-[50px] xl:w-[60px] bg-black rounded-full flex justify-center items-center">
+                          <img src="../imgs/icon_42.svg">
+                        </div>
+                        <p class="gordita400 text-[26px] xl:text-[31px] leading-[46px] xl:leading-[58px] mt-5 xl:mt-[35px] mb-4">We’v 9,000 agents around the country, Find agents near your neighborhood.</p>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                        <div class="h-[50px] xl:h-[60px] w-[50px] xl:w-[60px] bg-black rounded-full flex justify-center items-center">
+                          <img src="../imgs/icon_42.svg">
+                        </div>
+                        <p class="gordita400 text-[26px] xl:text-[31px] leading-[46px] xl:leading-[58px] mt-5 xl:mt-[35px] mb-4">We’v 9,000 agents around the country, Find agents near your neighborhood.</p>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                        <div class="h-[50px] xl:h-[60px] w-[50px] xl:w-[60px] bg-black rounded-full flex justify-center items-center">
+                          <img src="../imgs/icon_42.svg">
+                        </div>
+                        <p class="gordita400 text-[26px] xl:text-[31px] leading-[46px] xl:leading-[58px] mt-5 xl:mt-[35px] mb-4">We’v 9,000 agents around the country, Find agents near your neighborhood.</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Swiper End -->
+            </div>
+          </div>
+          <div class="lg:w-5/12 xl:w-1/2 px-3 ml-auto">
+            <div class="relative mt-[25px]">
+              <img class="ml-auto" src="../imgs/img_84.jpg">
+              <div class=" text-center flex justify-center items-center xl:translate-x-[-30px] xl:translate-y-[15px] w-full xl:w-40 h-20 xl:h-40 bg-black text-white text-[17px] xl:text-xl xl:leading-[50px]">
+                <div>
+                  <span class="gordita500 text-[40px] xl:text-[58px] mb-[-15px] xl:mb-0">4.8</span>
+                  <p class="gordita400 mb-2 xl:mb-0">avg rating</p>
+                </div>
+              </div>
+              <img class="absolute top-[-62px] right-[-60px] lg:right-[-62px]" src="../imgs/shape_163.svg">
+              <img class="absolute hidden lg:block bottom-0 right-[18%]" src="../imgs/shape_168.svg">
+            </div>
+          </div>
+        </div>
+        <img class="absolute hidden xl:block bottom-[32%] left-[-9%]" src="../imgs/shape_169.svg">
+        <img class="absolute w-[100px] xl:w-[187px] left-[20%] xl:left-[46%] top-[-50px] xl:top-[-98px] z-[2]" src="../imgs/sticker_03.png">
+      </div>
+    </div>
+    <!-- Check Our End -->
+    
+    <!-- Blog Start -->
+    <div class="pt-[90px] xl:pt-[150px] pb-[100px] xl:pb-[200px] relative bg-[#f5f7fc]">
+      <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+        <div class="relative">
+          <h2 class="gordita500 text-[35px] lg:text-[50px] xl:text-[58px] leading-[43.75px] lg:leading-[62.5px] xl:leading-[72.5px] mb-[10px] xl:mb-[30px]">Our Blog</h2>
+          <div class="-mx-3 md:flex">
+            <div class="md:w-1/2 px-3">
+              <div class="relative group h-[500px] mt-10 xl:mt-10 py-[35px] px-5 xl:pt-[75px] xl:pl-[50px] xl:pr-10 xl:pb-[42px] bg-[url(../imgs/blog_img_12.jpg)] bg-center bg-no-repeat bg-cover z-[2] before:absolute before:h-full before:w-full before:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0,rgba(0,0,0,.56)_100%)] before:left-0 before:top-0 before:duration-300 before:ease-in-out before:z-[-1] before:hover:bg-white before:hover:bg-none">
+                <div class="relative h-full">
+                  <div class="absolute left-0 -bottom-3 w-3/4 duration-300 ease-in-out group-hover:translate-y-[-100%] pr-3 lg:pr-0">
+                    <div>
+                      <a class="gordita500 uppercase px-[11px] py-[3px] mb-5 inline-block bg-black text-white text-xs leading-[18px]" href="#">Design</a>
+                      <a href="#">
+                        <h2 class="gordita500 text-2xl xl:text-[32px] leading-[37.433px] xl:leading-[50px] mb-2 text-white duration-300 ease-in-out hover:underline group-hover:text-black">Speaking remotely at WordCamp US.</h2>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="absolute left-0 bottom-0 w-full flex justify-between items-center mt-auto">
+                    <div class="gordita500 text-base duration-300 ease-in-out translate-y-[10px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">Featured - 
+                      <a class="gordita400 duration-300 ease-in-out hover:underline" href="#">18 Jul 2022</a>
+                    </div>
+                    <a class="inline-block w-[45px] h-[45px] text-center leading-[45px] text-2xl bg-[#ffe500] duration-300 ease-in-out hover:bg-black hover:text-white" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/2 px-3">
+              <div class="relative group h-[500px] mt-10 xl:mt-10 py-[35px] px-5 xl:pt-[75px] xl:pl-[50px] xl:pr-10 xl:pb-[42px] bg-[url(../imgs/img_83.jpg)] bg-center bg-no-repeat bg-cover z-[2] before:absolute before:h-full before:w-full before:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0,rgba(0,0,0,.56)_100%)] before:left-0 before:top-0 before:duration-300 before:ease-in-out before:z-[-1] before:hover:bg-white before:hover:bg-none">
+                <div class="relative h-full">
+                  <div class="absolute left-0 -bottom-3 w-3/4 duration-300 ease-in-out group-hover:translate-y-[-100%] pr-3 lg:pr-0">
+                    <div>
+                      <a class="gordita500 px-[11px] py-[3px] mb-5 inline-block bg-black text-white text-xs leading-[18px]" href="#">PROPERTY</a>
+                      <a href="#">
+                        <h2 class="gordita500 text-2xl xl:text-[32px] leading-[37.433px] xl:leading-[50px] mb-2 text-white duration-300 ease-in-out hover:underline group-hover:text-black">Print, publishing qui visual ux quis layout mockups.</h2>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="absolute left-0 bottom-0 w-full flex justify-between items-center mt-auto">
+                    <div class="gordita500 text-base duration-300 ease-in-out translate-y-[10px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">Featured - 
+                      <a class="gordita400 duration-300 ease-in-out hover:underline" href="#">18 Jul 2022</a>
+                    </div>
+                    <a class="inline-block w-[45px] h-[45px] text-center leading-[45px] text-2xl bg-[#ffe500] duration-300 ease-in-out hover:bg-black hover:text-white" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative text-center sm:absolute right-0 top-[35px] sm:top-[18px] lg:top-[35px]">
+            <div class="relative inline-block before:absolute before:w-full before:h-[2px] before:bg-black before:left-0 before:-bottom-1 ">
+              <a class="gordita500 text-[17px] inline-block leading-[0px] duration-300 ease-in-out hover:text-[#FF1292]" href="#">Check our all news <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="absolute bottom-[8%] sm:bottom-[9%] left-[9%]" src="../imgs/shape_163.svg">
+    </div>
+    <!-- Blog End -->
+    
+    <!-- Question & Answers -->
+    <div class="mt-[100px] xl:mt-[200px] relative">
+      <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+        <div class="-mx-3 lg:flex">
+          <div class="lg:w-1/2 xl:w-5/12 px-3">
+            <h2 class="gordita500 text-[35px] lg:text-[50px] xl:text-[58px] leading-[43.75px] lg:leading-[62.5px] xl:leading-[72.5px] mb-2">Question & Answers.</h2>
+            <p class="gordita400 mt-5 xl:mt-10 mb-[30px] xl:mb-[45px] text-xl xl:text-[22px] leading-[31.733px] xl:leading-9 text-[#48494E]">Don’t find your answer here? just send us a message for help</p>
+            <a class="gordita500 text-[15px] lg:text-base leading-[48px] lg:leading-[50px] px-[25px] lg:px-8 bg-black text-white inline-block rounded-[5px] duration-300 ease-in-out hover:bg-[#ff8c24] hover:text-white" href="#">See More</a>
+          </div>
+          <div class="lg:w-1/2 xl:w-7/12 px-3">
+            <div class="mt-[60px] lg:mt-0">
+              <div class="qna">
+                <button class="question relative w-full gordita500 text-left pt-5 pb-[10px] xl:py-[33px] pl-5 xl:pl-[35px] pr-[10px] xl:pr-5 text-[19px] xl:text-2xl leading-[27px] xl:leading-8 border-t-[2px] border-black after:absolute after:w-auto after:h-auto after:text-2xl after:right-5 duration-300 ease-in-out">How does the free trial work?</button>
+                <div class="answer xl:pl-[35px] xl:pr-10 px-5 overflow-hidden duration-300 ease-in-out">
+                  <p class="gordita400 text-lg xl:text-xl pb-5 xl:pb-[23px] leading-8 xl:leading-[38px] text-[#48494E] mb-4">
+                    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  </p>
+                </div>
+              </div>
+    
+              <div class="qna">
+                <button class="question relative w-full gordita500 text-left pt-5 pb-[10px] xl:py-[33px] pl-5 xl:pl-[35px] pr-[10px] xl:pr-5 text-[19px] xl:text-2xl leading-[27px] xl:leading-8 border-t-[2px] border-black after:absolute after:w-auto after:h-auto after:text-2xl after:right-5 duration-300 ease-in-out">How do I proccess home loan from jano?</button>
+                <div class="answer xl:pl-[35px] xl:pr-10 px-5 overflow-hidden h-0 duration-300 ease-in-out">
+                  <p class="gordita400 text-lg xl:text-xl pb-5 xl:pb-[23px] leading-8 xl:leading-[38px] text-[#48494E] mb-4">
+                    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  </p>
+                </div>
+              </div>
+    
+              <div class="qna">
+                <button class="question relative w-full gordita500 text-left pt-5 pb-[10px] xl:py-[33px] pl-5 xl:pl-[35px] pr-[10px] xl:pr-5 text-[19px] xl:text-2xl leading-[27px] xl:leading-8 border-t-[2px] border-black after:absolute after:w-auto after:h-auto after:text-2xl after:right-5 duration-300 ease-in-out">Do you recommend Pay as you go or Pre pay?</button>
+                <div class="answer xl:pl-[35px] xl:pr-10 px-5 overflow-hidden h-0 duration-300 ease-in-out">
+                  <p class="gordita400 text-lg xl:text-xl pb-5 xl:pb-[23px] leading-8 xl:leading-[38px] text-[#48494E] mb-4">
+                    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  </p>
+                </div>
+              </div>
+    
+              <div class="qna">
+                <button class="question relative w-full gordita500 text-left pt-5 pb-[10px] xl:py-[33px] pl-5 xl:pl-[35px] pr-[10px] xl:pr-5 text-[19px] xl:text-2xl leading-[27px] xl:leading-8 border-t-[2px] border-black after:absolute after:w-auto after:h-auto after:text-2xl after:right-5 duration-300 ease-in-out">What do I get for $0 with my plan?</button>
+                <div class="answer xl:pl-[35px] xl:pr-10 px-5 overflow-hidden h-0 duration-300 ease-in-out">
+                  <p class="gordita400 text-lg xl:text-xl pb-5 xl:pb-[23px] leading-8 xl:leading-[38px] text-[#48494E] mb-4">
+                    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  </p>
+                </div>
+              </div>
+    
+              <div class="qna">
+                <button class="question relative w-full gordita500 text-left pt-5 pb-[10px] xl:py-[33px] pl-5 xl:pl-[35px] pr-[10px] xl:pr-5 text-[19px] xl:text-2xl leading-[27px] xl:leading-8 border-y-[2px] border-black after:absolute after:w-auto after:h-auto after:text-2xl after:right-5 duration-300 ease-in-out">How to find specific property from any city?</button>
+                <div class="answer xl:pl-[35px] xl:pr-10 px-5 overflow-hidden h-0 duration-300 ease-in-out">
+                  <p class="gordita400 text-lg xl:text-xl pb-5 xl:pb-[23px] leading-8 xl:leading-[38px] text-[#48494E] mb-4">
+                    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  </p>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="absolute bottom-0 left-1/4 hidden lg:block" src="../imgs/shape_163.svg">
+    </div>
+    <!-- Question & Answers End -->
+    
+    <!-- Footer Banar -->
+    <div class="mt-[100px] xl:mt-[200px] pt-20 xl:pt-[150px] pb-[30px] bg-[url(../imgs/img_85.jpg)] bg-center bg-cover bg-no-repeat relative z-0 before:absolute before:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0,#000_100%)] before:w-full before:h-full before:left-0 before:top-0 before:z-[-1]">
+        <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+          <div class="lg:flex -mx-3">
+            <div class=" lg:w-1/2 px-3">
+              <h2 class="gordita500 text-[35px] lg:text-5xl xl:text-[58px] leading-[44.1px] lg:leading-[61px] xl:leading-[73px] text-white mb-5">Let’s get started with us.</h2>
+              <p class="gordita400 text-xl sm:text-[21px] xl:text-[22px] leading-[31.733px] xl:leading-9 text-white">For furthur info & support, <a class="underline inline-block text-[#FFE500]" href="#">Contact us.</a></p>
+            </div>
+            <div class=" lg:w-1/2 px-3">
+              <div class="mt-10 lg:mt-0 lg:ml-6 px-5 xl:px-[60px] pt-[35px] xl:pt-[65px] pb-[30px] xl:pb-[55px] bg-[#ffe500]">
+                <form action="#">
+                  <div class="sm:flex justify-between">
+                    <input class="w-full sm:w-[79%] lg:w-[274px] h-[55px] text-lg sm:text-xl gordita400 sm:leading-[30px] bg-transparent border-b-2 border-black outline-none" type="email" placeholder="Enter your email">
+                    <button class="w-full sm:w-[110px] gordita400 mt-[10px] sm:mt-0 h-[42px] sm:h-[55px] bg-black text-white tracking-[4px] text-[14px] sm:text-base leading-[21px] sm:leading-[24px]">SEND</button>
+                  </div>
+                  <div class="mt-[15px] gordita400 text-[15px] leading-[21px] opacity-75">We’ll contact you shortly</div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Footer Banar End -->
+    
+    <!-- Footer Start -->
+    <div class="bg-black relative z-[2] before:absolute before:w-full before:h-20 before:bg-[linear-gradient(0deg,rgba(0,0,0,0)_0,#000_100%)] before:left-0 before:top-0 before:z-[1]">
+      <div class="container 2xl:w-[1320px] xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[540px] w-full px-3 lg:px-0 mx-auto">
+        <div class="brd pt-[100px] xl:pt-[130px] pb-10 xl:pb-[60px] relative border-x border-[#ffffff1a] before:absolute before:h-full before:w-1/4 before:border-x before:border-[#ffffff1a] before:top-0 before:left-1/4 before:z-[-1] after:absolute after:h-full after:w-1/4 after:border-x after:border-[#ffffff1a] after:top-0 after:right-1/4 after:z-[-1]">
+          <div class="lg:flex gap-12 -mx-3">
+            <div class="w-full lg:w-1/3 px-3 mb-10">
+              <a class="inline-block" href="#"><img src="../imgs/logo_02.png"></a>
+              <p class="gordita400 text-lg leading-[34px] text-white mt-[15px] mb-[30px]">Best non-profit solution for charity.</p>
+              <ul>
+                <li class="inline-block"><a class="text-white w-[38px] h-[38px] border border-white text-center text-lg leading-[38px] duration-300 ease-in-out inline-block mr-3 hover:text-black hover:bg-[#ffe500] hover:border-[#ffe500]" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li class="inline-block"><a class="text-white w-[38px] h-[38px] border border-white text-center text-lg leading-[38px] duration-300 ease-in-out inline-block mr-3 hover:text-black hover:bg-[#ffe500] hover:border-[#ffe500]" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="inline-block"><a class="text-white w-[38px] h-[38px] border border-white text-center text-lg leading-[38px] duration-300 ease-in-out inline-block mr-3 hover:text-black hover:bg-[#ffe500] hover:border-[#ffe500]" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+            <div class="sm:flex w-full lg:w-2/3 justify-between">
+              <div class="w-full sm:w-1/3 lg:w-[26%] px-3 mb-[30px]">
+                <h5 class="gordita500 text-xl lg:text-2xl text-white leading-[29px] lg:leading-[34.8px] mb-[10px] lg:mb-5">About</h5>
+                <ul>
+                  <li>
+                    <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">Home</a>
+                  </li>
+                  <li>
+                    <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">Learn about us</a>
+                  </li>
+                  <li>
+                    <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">Careers</a>
+                  </li>
+                  <li>
+                    <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">Features</a>
+                  </li>
+                  <li>
+                    <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full sm:w-1/3 lg:w-[26%] px-3 mb-[30px]">
+                  <h5 class="gordita500 text-xl lg:text-2xl text-white leading-[29px] lg:leading-[34.8px] mb-[10px] lg:mb-5">Services</h5>
+                  <ul>
+                    <li>
+                      <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">Home</a>
+                    </li>
+                    <li>
+                      <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">Search Properties</a>
+                    </li>
+                    <li>
+                      <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">List your Assignment</a>
+                    </li>
+                    <li>
+                      <a class="text-[#ffffffb3] inline-block gordita400 text-base lg:text-[18px] leading-[38px] lg:leading-10 duration-300 ease-in-out hover:underline hover:text-[#ffe500]" href="#">Get in Touch</a>
+                    </li>
+                  </ul>
+              </div>
+              <div class="w-full sm:w-1/3 lg:w-[39.1%] px-3 mb-[30px]">
+                  <h5 class="gordita500 text-xl lg:text-2xl text-white leading-[29px] lg:leading-[34.8px] mb-[10px] lg:mb-5">Address</h5>
+                  <p class="gordita400 text-base lg:text-[18px] text-[#ffffffb3] leading-[30px] mb-4">2190 Mirpur terrace, Lake view <br> house state, 10 no road.</p>
+              </div>
+            </div>
+          </div>
+          <p class="gordita400 relative text-center lg:absolute text-[#ffffff80] left-0 bottom-0 lg:bottom-[110px] text-[15px] leading-7 pt-[30px]">© 2010 - 2022 jano inc.</p>
+        </div>
+      </div>
+      <img class="absolute right-[3%] bottom-[3%] hidden sm:block" src="../imgs/shape_170.svg">
+    </div>
+    <!-- Footer End -->
+    
+    
+        <!-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="../javascript/script.js"></script>
+    </body>
+</html>
