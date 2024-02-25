@@ -44,11 +44,13 @@ function scrollFunction() {
     document.getElementById("navber").style. paddingBottom = "12px";
     document.getElementById("navber").style. position = "fixed";
     document.getElementById("navber").style. boxShadow = "0 13px 35px -12px rgba(35,35,35,.1)";
+    document.getElementById("uparrow").style. display = "block";
   } else {
     document.getElementById("navber").style.background = "transparent";
     document.getElementById("navber").style. paddingTop = "20px";
     document.getElementById("navber").style. paddingBottom = "20px";
     document.getElementById("navber").style. boxShadow = "none";
+    document.getElementById("uparrow").style. display = "none";
   }
 }
 
@@ -88,38 +90,6 @@ hasCollapsible.forEach(function (collapsible) {
 
 
 // <!-- Tabs -->
-
-// let tabsContainer = document.querySelector("#tabs");
-// let tabTogglers = tabsContainer.querySelectorAll("#tabs a");
-
-// console.log(tabTogglers);
-
-// tabTogglers.forEach(function(toggler) {
-//   toggler.addEventListener("click", function(e) {
-//     e.preventDefault();
-
-//     let tabName = this.getAttribute("href");
-
-//     let tabContents = document.querySelector("#tab-contents");
-
-//     for (let i = 0; i < tabContents.children.length; i++) {
-      
-//       tabTogglers[i].parentElement.classList.remove("text-white", "bg-black");  
-//       tabContents.children[i].classList.remove("opacity-0", "hidden");
-//       if ("#" + tabContents.children[i].id === tabName) {
-//         continue;
-//       }
-//       tabContents.children[i].classList.add("opacity-0", "hidden");
-      
-//     }
-//     e.target.parentElement.classList.add("text-white", "bg-black");
-//   });
-// });
-// <!-- Tabs End -->
-
-
-
-
 let tabsContainer = document.querySelector("#tabs");
 
 let tabTogglers = tabsContainer.querySelectorAll("#tabs a");
@@ -146,18 +116,7 @@ tabTogglers.forEach(function(toggler) {
     e.target.parentElement.classList.add("text-white", "bg-black");
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
+// <!-- Tabs End -->
 
 
 // count js
