@@ -212,3 +212,16 @@ document.querySelectorAll('.select').forEach(function (dropdownWrapper) {
   })
 })
 // custom select End
+
+
+// uparrow
+const uparrow = document.querySelector('#uparrow')
+uparrow.addEventListener("click", scrollToTop);
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+// uparrow End
