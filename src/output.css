@@ -1185,6 +1185,96 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-\[spin\] {
+  animation: spin;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-\[spin_5s\] {
+  animation: spin 5s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-\[spin_5s_\] {
+  animation: spin 5s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-\[spin_5s_in\] {
+  animation: spin 5s in;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-\[spin_5s_infinite\] {
+  animation: spin 5s infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-\[spin_5s_linear_infinite\] {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-\[spin_3s_linear_infinite\] {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-\[spin_s_linear_infinite\] {
+  animation: spin s linear infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -2023,6 +2113,14 @@ video {
 
 .duration-\[\.4s\] {
   transition-duration: .4s;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .ease-in-out {
